@@ -8,6 +8,12 @@ ignored)
 
 public class PalindromePermutation {
     public static boolean palindromePermutation(String input) {
+        if (input == null) {
+            return false;
+        }
+        if (input.length() == 0) {
+            return true;
+        }
         int bitVector = occurrence(input);
         return bitVector == 0 || onlyOneBit(bitVector);
     }
