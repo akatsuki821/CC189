@@ -43,14 +43,23 @@ public class ThreeSum {
     }
 
     public static void main(String[] args) {
-        ThreeSum solution = new ThreeSum();
-        int[] array = new int[] {3, 4, 0, -1, 2, 0, 5};
-        List<List<Integer>> res = solution.allTriples(array, 4);
-        for (List<Integer> list : res) {
-            for (int i : list) {
-                System.out.print(i + " ");
-            }
-            System.out.println();
+//        ThreeSum solution = new ThreeSum();
+//        int[] array = new int[] {3, 4, 0, -1, 2, 0, 5};
+//        List<List<Integer>> res = solution.allTriples(array, 4);
+//        for (List<Integer> list : res) {
+//            for (int i : list) {
+//                System.out.print(i + " ");
+//            }
+//            System.out.println();
+//        }
+        List<List<String>> outsideList = new ArrayList<>();
+        ArrayList<String> firstList = new ArrayList<>(Arrays.asList("this", "is", "a", "test"));
+        LinkedList<String> secondList = new LinkedList<>(Arrays.asList("this", "is", "another", "test"));
+        outsideList.add(firstList);
+        outsideList.add(secondList);
+        for (int i = 0; i < outsideList.size(); i++) {
+            outsideList.get(i).add("!");
+            System.out.println(outsideList.get(i));
         }
     }
 }
